@@ -35,7 +35,7 @@ export const About = () => {
     </div>
     <div className="col md:w-1/2 md:flex hidden md:pt-0 pt-10">
         <img className='react-img pt-5' src='/assets/react-logo.png' alt="mern" />
-    </div>class=
+    </div>
     </div>
     </div>
     <div className="container-fluid overflow-hidden h-auto connect-padding bg-cyan-950">
