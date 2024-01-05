@@ -9,7 +9,7 @@ const Cards = () => {
   { projects && projects.map((item, index) => (
          <div key={index} className="max-w-sm m-4 bg-cyan-950 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <Link to={'/'}>
-        <img className="rounded-t-lg" src={item.img} alt="" />
+        <img className="rounded-t-lg" src={item.img} alt="image" />
     </Link>
     <div className="p-5">
         <a href="#">
@@ -40,7 +40,7 @@ export const Web = () => {
       { Webprojects && Webprojects.map((item, index) => (
              <div key={index} className="max-w-sm m-4 bg-cyan-950 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link to={'/'}>
-            <img className="rounded-t-lg" src={item.img} alt="" />
+            <img className="rounded-t-lg" src={item.img} alt="image" />
         </Link>
         <div className="p-5">
             <a href="#">
@@ -67,7 +67,7 @@ export const Game = () => {
       { gameProjects && gameProjects.map((item, index) => (
              <div key={index} className="max-w-sm m-4 bg-cyan-950 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link to={'/'}>
-            <img className="rounded-t-lg" src={item.img} alt="" />
+            <img className="rounded-t-lg" src={item.img} alt="image" />
         </Link>
         <div className="p-5">
             <a href="#">
@@ -94,7 +94,7 @@ export const Others = () => {
       { othersProjects && othersProjects.map((item, index) => (
              <div key={index} className="max-w-sm m-4 bg-cyan-950 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link to={'/'}>
-            <img className="rounded-t-lg" src={item.img} alt="" />
+            <img className="rounded-t-lg" src={item.img} alt="image" />
         </Link>
         <div className="p-5">
             <a href="#">

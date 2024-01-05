@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./about.css";
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 export const About = () => {
@@ -67,9 +67,6 @@ Let's Connect! 🤝
     Impressed by this portfolio? Discover more about what she does by</p>
         <h1 className='lg:text line-height-6xl text-6xl py-4 md:text-5xl text-slate-50 font-bold'>Visit Github <br/>Repository</h1>
 <div className='md:hidden p-2 flex justify-center'>
-{/* <Link to={data.html_url}><button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Click Me</button>
-</Link> */}
-
 <Link to={data.html_url}><button data-popover-target="popover-user-profile" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View profile</button></Link>
 
 <div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
@@ -132,8 +129,3 @@ Let's Connect! 🤝
     </>
   )
 }
-
-// export const githubDataInfo = async () => {
-//   const response = await fetch('https://api.github.com/users/Hennamaria07');
-//   return response.json();
-//   }
