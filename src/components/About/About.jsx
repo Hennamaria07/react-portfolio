@@ -38,7 +38,7 @@ export const About = () => {
     </div>
     </div>
     </div>
-    <div className="container-fluid overflow-hidden h-auto connect-padding bg-cyan-950">
+    <div className="container-fluid overflow-hidden h-auto  bg-cyan-950">
     <div className="row md:flex">
     <div className="col md:w-1/2">
     <p className='text-red-100'>__________<span className='sm:inline hidden'>_______</span>_________Meet and Greet!</p>

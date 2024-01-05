@@ -169,23 +169,23 @@ const Contact = () => {
               }}>
                 <form className="max-w-md mx-auto" onSubmit={handleForm}>
                   <div className="relative z-0 w-full mb-5 group">
-                    <input type="text" value={name} name="floating_name" id="floating_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setName(e.target.value)}} placeholder=" " />
+                    <input type="text" value={name} name="floating_name" id="floating_name" className="block py-2.5 px-0 w-full text-sm text-zinc-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setName(e.target.value)}} placeholder=" " />
                     <label htmlFor="floating_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full Name</label>
                     <p className="text-red-500">{nameError}</p>
                   </div>
                   <div className="relative z-0 w-full mb-5 group">
-                    <input  name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setEmail(e.target.value)}} placeholder=" "  />
+                    <input  name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-zinc-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setEmail(e.target.value)}} placeholder=" "  />
                     <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email Address</label>
                     <p className="text-red-500">{emailError}</p>
                   </div>
                   <div className="relative z-0 w-full mb-5 group">
-                    <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setNumber(e.target.value)}} placeholder=" "  />
+                    <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-zinc-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setNumber(e.target.value)}} placeholder=" "  />
                     <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PHone Number</label>
                     <p className="text-red-500">{numberError}</p>
                   </div>
                   <div className="py-2 rounded-t-lg dark:bg-gray-800">
                     <label htmlFor="comment" className="sr-only">Your comment</label>
-                    <textarea id="comment" rows="4" className="w-full px-0 text-sm text-gray-900 bg-transparent border-3 border-zinc-300  focus:ring-0" placeholder="Write a comment..." ></textarea>
+                    <textarea id="comment" rows="4" className="w-full px-0 text-sm text-zinc-300 bg-transparent border-3 border-zinc-300  focus:ring-0" placeholder="Write a comment..." ></textarea>
                   </div>
                   <div className="relative z-0 w-full mb-5 group">
                     <button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-zinc-300 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
