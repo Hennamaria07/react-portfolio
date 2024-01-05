@@ -112,7 +112,7 @@ Let's Connect! 🤝
   <div className='flex justify-center'>
 	<img className="round" src={data.avatar_url} width={"50%"} alt="user" />
   </div>
-	<h3>{data.name}{console.log(data)}</h3>
+	<h3>{data.name}</h3>
 	<h6>{data.location}</h6>
 	<p className='px-5 align-text'>{data.bio}</p>
 	<div className="buttons pt-2">
