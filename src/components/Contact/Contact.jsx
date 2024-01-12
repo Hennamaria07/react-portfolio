@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { json } from "react-router-dom";
+import { Await, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 // import "../About/"
 const Contact = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [number, setNumber] = useState('')
@@ -75,6 +77,9 @@ const Contact = () => {
             position: toast.POSITION.TOP_CENTER,
             theme: "dark",
           });
+         await new Promise((resolve, reject) => setTimeout((resolve) => {
+            navigate('/')
+          }, 2000))
         }
       } catch (error) {
         toast.error(error.message, {
