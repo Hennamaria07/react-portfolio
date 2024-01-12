@@ -1,4 +1,6 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { json } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import "../About/"
@@ -6,13 +8,16 @@ const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [number, setNumber] = useState('')
+  const [message, setMessage] = useState('')
   const [nameError, setNameError] = useState('')
   const [emailError, setEmailError] = useState('')
   const [numberError, setNumberError] = useState('')
+  const [messageError, setMessageError] = useState('')
   const validate = () => {
     const nameRegEx = /^[a-zA-Z\s.'-]+$/;
     const emailRegEx = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/;
     const numberRegEx = /^\+?([91])?[789]\d{9}$/;
+    const messageRegEx = /^[a-zA-Z\s]{10,}$/;
   
     const errors = {};
   
@@ -33,11 +38,16 @@ const Contact = () => {
     } else if (!numberRegEx.test(number)) {
       errors.number = "Invalid phone number";
     }
+    if (message === "") {
+      errors.message = "Please enter your message";
+    } else if (!messageRegEx.test(message)) {
+      errors.message = "The message should contain atleast 10 characters";
+    }
   
     return Object.keys(errors).length === 0 ? null : errors;
   };
   
-  const handleForm = (e) => {
+  const handleForm = async (e) => {
     e.preventDefault();
     const errors = validate();
   
@@ -45,15 +55,35 @@ const Contact = () => {
       setNameError(errors.name || "");
       setEmailError(errors.email || "");
       setNumberError(errors.number || "");
+      setMessageError(errors.message || "");
+      // e.stopPropagation();
     } else {
-      toast.success("Form submitted successfully!", {
-        position: toast.POSITION.TOP_CENTER,
-        theme: "dark",
-      });
-      setNameError("");
+      setNameError('');
       setEmailError("");
       setNumberError("");
+      setMessageError("");
+      try {
+        const res = await axios.post("http://localhost:4000/submit", {
+          fullname: name,
+          email: email,
+          phone: number,
+          message: message
+        });
+        // console.log(res.data.message);
+        if(res.data.success){
+          toast.success(res.data.message, {
+            position: toast.POSITION.TOP_CENTER,
+            theme: "dark",
+          });
+        }
+      } catch (error) {
+        toast.error(error.message, {
+          position: toast.POSITION.TOP_CENTER,
+          theme: "dark",
+        });
+      }
     }
+
   };
   
   return (
@@ -179,13 +209,14 @@ const Contact = () => {
                     <p className="text-red-500">{emailError}</p>
                   </div>
                   <div className="relative z-0 w-full mb-5 group">
-                    <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-zinc-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setNumber(e.target.value)}} placeholder=" "  />
-                    <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PHone Number</label>
+                    <input type="number" name="floating_number" id="floating_number" className="block py-2.5 px-0 w-full text-sm text-zinc-300 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={(e)=>{setNumber(e.target.value)}} placeholder=" "  />
+                    <label htmlFor="floating_number" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PHone Number</label>
                     <p className="text-red-500">{numberError}</p>
                   </div>
                   <div className="py-2 rounded-t-lg dark:bg-gray-800">
                     <label htmlFor="comment" className="sr-only">Your comment</label>
-                    <textarea id="comment" rows="4" className="w-full px-0 text-sm text-zinc-300 bg-transparent border-3 border-zinc-300  focus:ring-0" placeholder="Write a comment..." ></textarea>
+                    <textarea id="comment" rows="4" onChange={(e) => { setMessage(e.target.value)}} className="w-full px-0 text-sm text-zinc-300 bg-transparent border-3 border-zinc-300  focus:ring-0" placeholder="Write a comment..." ></textarea>
+                    <p className="text-red-500">{messageError}</p>
                   </div>
                   <div className="relative z-0 w-full mb-5 group">
                     <button className="relative w-full inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-zinc-300 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
