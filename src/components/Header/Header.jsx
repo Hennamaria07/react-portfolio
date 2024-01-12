@@ -24,10 +24,10 @@ const Header = () => {
       <nav className={`fixed z-10 top-0 w-full bg-cyan-950 border-gray-200 ${
           scrolling ? 'shadow-md' : ''}`}>
         <div className="max-w-screen-xl bg-cyan-950 flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">logo</span>
-          </a>
+          </Link>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
