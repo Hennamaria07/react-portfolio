@@ -77,9 +77,9 @@ const Contact = () => {
             position: toast.POSITION.TOP_CENTER,
             theme: "dark",
           });
-         await new Promise((resolve, reject) => setTimeout((resolve) => {
-            navigate('/')
-          }, 2000))
+         await setTimeout(() =>{
+          navigate('/')
+         }, 2000)
         }
       } catch (error) {
         toast.error(error.message, {
