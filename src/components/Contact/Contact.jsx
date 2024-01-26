@@ -1,8 +1,8 @@
-import axios from "axios";
 import React, { useState } from "react";
-import { Await, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import instance from "../../axios";
 
 // import "../About/"
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
   const [messageError, setMessageError] = useState('')
   const validate = () => {
     const nameRegEx = /^[a-zA-Z\s.'-]+$/;
-    const emailRegEx = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/;
+    const emailRegEx = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
     const numberRegEx = /^\+?([91])?[789]\d{9}$/;
     const messageRegEx = /^[a-zA-Z\s]{10,}$/;
   
@@ -65,12 +65,13 @@ const Contact = () => {
       setNumberError("");
       setMessageError("");
       try {
-        const res = await axios.post("http://localhost:4000/submit", {
+        const res = await instance.post("/submit", {
           fullname: name,
           email: email,
           phone: number,
           message: message
         });
+       
         // console.log(res.data.message);
         if(res.data.success){
           toast.success(res.data.message, {
@@ -82,7 +83,7 @@ const Contact = () => {
          }, 2000)
         }
       } catch (error) {
-        toast.error(error.message, {
+        toast.error(error.response.data.message, {
           position: toast.POSITION.TOP_CENTER,
           theme: "dark",
         });

@@ -6,7 +6,9 @@
     height: 8rem;
     padding-top: 2rem;
 }
-
+.home-wrapper{
+  max-height: calc(100vh- 56px);
+}
 .arrows-home {
     width: 60px;
     height: 72px;
