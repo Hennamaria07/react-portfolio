@@ -51,7 +51,7 @@ const Home = () => {
                 <div className="flex flex-row container-padding h-full md:px-10 items-center">
           <div className="md:w-1/2 md:pt-0">
             
-    <p className='text-zinc-300 sm:pt-0 pt-14 md:pt-10 '>__________<span className='sm:inline hidden'>_______</span>_________What is she?</p>
+    <p className='text-zinc-300 sm:pt-0 pt-16 md:pt-14'>__________<span className='sm:inline hidden'>_______</span>_________What is she?</p>
             <div className='heading-height'>
             <h1 className="text-5xl md:text-6xl text-center text-sky-300 font-bold">
               I'M A <span className="text text-sky-500"></span>

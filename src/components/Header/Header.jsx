@@ -29,11 +29,11 @@ const Header = () => {
           </Link>
       <Navbar.Toggle />
       <Navbar.Collapse className='bg-cyan-950' >
-      <Link to="/" className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Home</Link>
-      <Link to="/about" className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>About</Link>
-      <Link to="/services" className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Services</Link>
-      <Link to="/projects" className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Projects</Link>
-      <Link to="/contact" className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Contact</Link>
+      <Link to="/" className={`block py-2 px-3 text-white rounded hover:bg-cyan-500 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Home</Link>
+      <Link to="/about" className={`block py-2 px-3 text-white rounded hover:bg-cyan-500 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>About</Link>
+      <Link to="/services" className={`block py-2 px-3 text-white rounded hover:bg-cyan-500 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Services</Link>
+      <Link to="/projects" className={`block py-2 px-3 text-white rounded hover:bg-cyan-500 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Projects</Link>
+      <Link to="/contact" className={`block py-2 px-3 text-white rounded hover:bg-cyan-500 md:hover:bg-transparent hover:bg-cyan-500 md:border-0 md:hover:text-gray-300 hover:text-black md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>Contact</Link>
       </Navbar.Collapse>
     </Navbar>
     </>
