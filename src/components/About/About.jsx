@@ -85,7 +85,7 @@ Let's Connect! 🤝
         <p className="mb-3 text-sm font-normal">
             <Link to={'/'} className="hover:underline">@jeseleos</Link>
         </p>
-        <p className="mb-4 text-sm">Open-source contributor. Building <a to={'/'} className="text-blue-600 dark:text-blue-500 hover:underline">flowbite.com</a>.</p>
+        <p className="mb-4 text-sm">Open-source contributor. Building <Link to={'/'} className="text-blue-600 dark:text-blue-500 hover:underline">flowbite.com</Link>.</p>
         <ul className="flex text-sm">
             <li className="me-2">
                 <Link to={'/'} className="hover:underline">

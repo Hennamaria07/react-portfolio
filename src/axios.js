@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "https://portfolio-backend-6pmi.onrender.com"
+    baseURL: "https://react-portfolio-m1cu.onrender.com"
 })
 
 export default instance;
