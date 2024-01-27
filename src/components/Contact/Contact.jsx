@@ -19,7 +19,7 @@ const Contact = () => {
     const nameRegEx = /^[a-zA-Z\s.'-]+$/;
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
     const numberRegEx = /^\+?([91])?[789]\d{9}$/;
-    const messageRegEx = /^[a-zA-Z\s]{10,}$/;
+    const messageRegEx = /^[a-zA-Z\s.]{10,}$/;
   
     const errors = {};
   
@@ -168,7 +168,7 @@ const Contact = () => {
                       Phone Number
                     </h4>
                     <p className="text-zinc-200 text-body-color dark:text-dark-6">
-                      (+62)81 414 257 9980
+                      (+91) 7510477739
                     </p>
                   </div>
                 </div>
