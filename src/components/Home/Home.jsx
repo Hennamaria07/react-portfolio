@@ -79,7 +79,7 @@ const Home = () => {
           </div>
         </div>
             </div>
-            <About />
+            {/* <About /> */}
         </>
     )
 }
