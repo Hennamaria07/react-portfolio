@@ -3,7 +3,7 @@ import { useEffect} from "react";
 import Typed from 'typed.js';
 import './home.css';
 import { Link } from 'react-router-dom';
-import { BD, FD, ML, Others } from './Cards';
+import { BD, FD, ML, Others } from './Cards.jsx';
 
 const Home = () => {
     useEffect(() => {
