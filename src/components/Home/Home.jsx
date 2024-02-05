@@ -4,7 +4,7 @@ import { useEffect} from "react";
 // import { loadSlim } from "@tsparticles/slim";
 import Typed from 'typed.js';
 import './home.css';
-import { About } from '../About/About';
+// import { About } from '../About/About';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
