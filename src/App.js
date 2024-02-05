@@ -2,11 +2,13 @@ import React from 'react';
 import { Header, Home, About, Footer, Services, Contact } from './components';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Project from './components/Project/Project';
+import NavBar from './components/Header/NavBar';
 function App() {
   return (
     <>
     <BrowserRouter>
-    <Header />
+    {/* <Header /> */}
+    <NavBar />
     <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
