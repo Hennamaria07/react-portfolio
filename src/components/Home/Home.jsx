@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useEffect} from "react";
 import Typed from 'typed.js';
 import {About} from "../About/About.jsx"
